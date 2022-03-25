@@ -1,18 +1,33 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DecimalWrapperComponent } from './decimal/decimal-wrapper.component';
+import { DecimalComponent } from './decimal/decimal.component';
+import { UpgradesComponent } from './upgrades/upgrades.component';
+import { OptionalIngredientDirective, RecipesComponent } from './recipes/recipes.component';
+import { WeatherComponent, WeatherService } from './weather/weather.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DecimalWrapperComponent,
+    DecimalComponent,
+    UpgradesComponent,
+    RecipesComponent,
+    OptionalIngredientDirective,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    WeatherService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
